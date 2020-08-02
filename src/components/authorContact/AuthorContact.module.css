@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+.mainaut {
+  background-color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+}
+/* HEADER/////////////////////////////////////// */
+
+.header h2 {
+  font-size: 27px;
+  margin-bottom: 0;
+}
+.header h3 {
+  font-size: 20px;
+  margin-top: 0;
+}
+.header img {
+  width: 190px;
+  height: 190px;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+.header {
+  background-color: #aaa;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  border-bottom: 40px solid #6122fc;
+}
+
+/* END Of HEADER/////////////////////////////////// */
+
+/* ABOUT ME & SKILLSETS ////////////////////////////////////////// */
+.aboutme {
+  padding: 20px;
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  background-color: #ddd;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.skillsets {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 15px;
+  grid-row-gap: 20px;
+}
+.skilset {
+  display: grid;
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px -2px gray;
+}
+.skillsets img {
+  justify-content: center;
+  width: 50px;
+}
+
+/* END OF ABOUT ME & SKILLSET///////////////////// */
+
+/* PORTFOLIO//////////////////////////////////////// */
+.portfolio {
+  margin: 0 20px;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  background-color: #d1d1d1;
+  box-shadow: 0px 0px 10px -2px gray;
+}
+
+.ports {
+  box-sizing: border-box;
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  grid-gap: 30px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  margin-right: 15px;
+  overflow: hidden;
+}
+.port {
+  display: grid;
+  position: relative;
+  width: 275px;
+  height: 480px;
+  width: 100%;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  color: #fff;
+}
+.port p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  opacity: 0;
+}
+.port:nth-child(1) {
+  background: url('./meme/are51.jpg');
+  background-size: 100%;
+  background-position: center;
+}
+.port:nth-child(2) {
+  background: url('./meme/duyuknodawey.jpg');
+  background-size: 100%;
+  background-position: center;
+}
+.port:nth-child(3) {
+  background: url('./meme/spongebobmeme.jpg');
+  background-size: 100%;
+  background-position: center;
+}
+.port:nth-child(4) {
+  background: url('./meme/first\ \ guy.jpg');
+  background-size: 100%;
+  background-position: center;
+}
+.port:nth-child(5) {
+  background: url('./meme/tom.png');
+  background-size: 100%;
+  background-position: center;
+}
+.port:nth-child(6) {
+  background: url('./meme/pooh.png');
+  background-size: 100%;
+  background-position: center;
+}
+.port:hover {
+  background-size: 150%;
+  background-position: center;
+}
+
+.port::after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.port:nth-child(2):hover {
+  background-size: 150%;
+  background-position: center;
+}
+.port:hover::after {
+  opacity: 0.4;
+}
+.port:hover p {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* END OF PORTFOLIO/////////////////////////////// */
+
+/* CONTACT FROM /////////////////////////////////////////// */
+.contactform {
+  background-color: #ddd;
+  margin: 20px 20px;
+  box-shadow: 0px 0px 10px -2px gray;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contactform h1 {
+  margin-top: 20px;
+}
+.insideform {
+  width: 100%;
+}
+.insideform label {
+  display: block;
+  text-align: left;
+}
+.input input[type='text'],
+.input textarea {
+  width: 100%;
+}
+.input input[type='text'] {
+  height: 30px;
+}
+.input button[type='submit'] {
+  background-color: #6122fc;
+  border: none;
+  color: #fff;
+  margin: 10px;
+  padding: 0.8rem 1.6rem;
+  font-size: 14px;
+}
+.input {
+  margin-top: 15px;
+}
+.spans {
+  padding-right: 3px;
+}
+/* END OF CONTACT FROM/////////////////////////////////////////// */
+/* MEDIA QUERIES////////////////////////////////////////////////// */
+@media (min-width: 535px) {
+  .input input[type='text'] {
+    height: 35px;
+  }
+}
+@media (min-width: 790px) {
+  .contactform {
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 780px;
+  }
+}
+
+@media (min-width: 850px) {
+  .header img {
+    width: 250px;
+    height: 250px;
+  }
+  .header h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1230px) {
+  .contactform {
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1080px;
+  }
+  .input label {
+    font-size: 20px;
+  }
+  .input input[type='text'] {
+    height: 45px;
+  }
+  .input button[type='submit'] {
+    padding: 1.2rem 2.4rem;
+    font-size: 17px;
+  }
+}

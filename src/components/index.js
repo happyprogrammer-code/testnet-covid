@@ -1,0 +1,5 @@
+export {default as Nav} from './nav/Nav'
+export {default as Home} from './homeCounter/HomeCounter'
+export {default as Updates} from './updates/Updates'
+export {default as Author} from './authorContact/AuthorContact'
+export {default as Footer} from './footer/Footer'

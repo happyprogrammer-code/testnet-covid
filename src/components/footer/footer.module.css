@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.mainfooter{
+    background-image: url('./img/footer@1x.svg');
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 99% 1%;
+    grid-template-areas: 
+    'left center right'
+    'copy copy copy';
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+    
+}
+.left{
+    grid-area: left;
+    padding: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 98% 3%;
+    grid-template-areas: 
+    'logo line'
+    'text line'
+    'sos line'
+    ;
+    
+   
+    
+}
+.footertext{
+    grid-area: text;
+}
+.left img{
+    grid-area: logo;
+    width: 170px;
+    display: grid;
+}
+.icon{
+    transition: .3s all;
+}
+.soscmedlist{
+    width: 60%;
+    grid-area: sos;
+    font-size: 2.5vw;
+    display: inline-block;
+    background-color: #3333;
+    position: relative;
+    z-index: 2;
+    padding: 08px;
+    border-radius: 50px;
+    text-align: center;
+    height: 6vh;
+    box-sizing: unset;
+   
+    
+    
+    
+}
+.links{
+  margin:15px;
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  transition: all .1s;
+}
+
+.links::before{
+    content: '';
+    width: 42px;
+    height: 42px;
+    background-color: pink;
+    display: inline-block;
+    position: absolute;
+    top: -4%;
+    left: -25%;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all .1s;
+    transition-delay: .09s;
+    transition-timing-function: ease-in-out;
+}
+.links:nth-child(1)::before{
+    position: absolute;
+    top: -6%;
+    left: -60%;
+    background-color: #3b5998;
+    transform: scale(0);
+}
+.links:nth-child(2)::before{
+    background-color: #0e76a8 ;
+    transform: scale(0);
+}
+.links:nth-child(3)::before{
+    background-color: #8a3ab9;
+    transform: scale(0);
+}
+.links:nth-child(4)::before{
+    background-color: #00acee ;
+    transform: scale(0);
+}
+
+.links:hover::before{
+    transform: scale(1);
+}
+/* .left::after{
+    content: '';
+    background-color: #fff;
+    width: 2px;
+} */
+
+.vr{
+    display: grid;
+    justify-content: end;
+    grid-area: line;
+   
+   
+   
+
+   
+}
+.line{
+    background-color: #fff;
+    width: 2px;
+}
+
+.center{
+    display: grid;
+    position: relative;
+    grid-template-columns: 98% 2%;
+    
+    padding: 20px;
+
+
+}
+.insidecenter{
+    display: grid;
+   
+   
+
+
+}
+.insidecenter h1{
+    font-size: 3vw;
+}
+.insidecenter ul{
+    list-style: none;
+}
+.insidecenter ul li{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    justify-content: center;
+    align-items: center;
+}
+.insidecenter ul li::before{
+    content: '';
+    width: 1vw;
+    height: 1vw;
+    background-color: red;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.vr2{
+    position: relative;
+    display: grid;
+    justify-content: end;
+}
+.line2{
+    background-color: white;
+    width: 2px;
+    
+    
+}
+
+.right{
+    padding: 20px;
+    text-align: center;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 20% 80%;
+
+    
+}
+.inputs{
+  display: grid;
+  grid-template-columns: 1fr;
+   grid-template-rows: 20% 70%;
+   grid-gap: 10px;
+   
+}
+
+.inputs input{
+    font-size: 18px;
+    outline: none;
+    width: 100%;
+}
+.inputs textarea{
+    font-size: 16px;
+}
+.inputs input, .inputs textarea{
+    border: none;
+    border-radius: 15px;
+}
+.right h1{
+    font-weight: 7000;
+    font-size: 3vw;
+    font-family: 'Roboto', 'sans-serif';
+}
+.copy P{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.copy{
+    grid-area: copy;
+    padding: 20px;
+    position: relative;
+    z-index: 700;
+    display: block;
+    position: relative;
+    
+    background-color: #03015e;
+   
+}
+
+@media(max-width:1250px){
+    .soscmedlist{
+        height: 7.5vh;
+    }
+    .left .soscmedlist .links::before{
+        display: none;
+        
+    }
+}
+
+@media(max-width: 920px){
+.mainfooter{
+    width: 100vw;
+}
+ .left, .center, .right{
+     font-size: 1rem;
+ }
+  .insidecenter ul{
+      margin: 0;
+      padding: 0;
+  }
+  .left img{
+    width: 100px;
+   
+}
+.center h1{
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    
+}
+.center ul{
+    margin-right: 20px;
+}
+.soscmedlist{
+    height: 13vh;
+    border-radius: 15px;
+    padding: 20;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1rem;
+    
+}
+}
+
+@media(max-width:600px){
+    .mainfooter{
+      
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+    .right .inputs{
+        width: 40vw;
+        font-size: 1.4rem;
+    }
+    .inputs input{
+        height: 30px;
+        border-radius: 5px;
+    }
+    .inputs textarea{
+        height: 160px;
+        border-radius: 5px;
+    }
+    .right{
+        align-items: start;
+    }
+    
+    .center{
+        display: none;
+    }
+    .copy{
+        text-align: center;
+    }
+    .right h1{
+        font-size: 5vw;
+    }
+}
+@media(max-width: 510px){
+    .inputs input{
+        font-size: 16px;
+    }
+    .ordertitle h1{
+        margin-top: 25px;
+        font-size: 5vw;
+    }
+    .left .vr{
+        display: none;
+    }
+}
