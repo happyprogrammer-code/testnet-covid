@@ -75,8 +75,7 @@ export class HomeCounter extends Component {
         <div className={style.main}>
           <div className={style.header}>
             <h1 className={style.mainheadertitle}>
-              <span className={style.span}>COVID-19</span>
-              <br /> LIVE COUNTER
+              LMAOO IT FUCKIN WORKED
             </h1>
           </div>
           <div className="container">
